@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Primary Green Palette - Exact Specification */
+  --primary-green: #2ECC71;
+  --accent-green: #27AE60;
+  --primary-green-dark: #27AE60;
+  --primary-green-darker: #229954;
+  --primary-green-light: #58D68D;
+  --primary-green-lighter: #82E0AA;
+  --primary-green-hover: rgba(46, 204, 113, 0.1);
+  
+  /* Status Colors - Exact Specification */
+  --status-pending: #F39C12;
+  --status-resolved: #2ECC71;
+  --status-emergency: #E74C3C;
+  --warning-orange: #F39C12;
+  --error-red: #E74C3C;
+  
+  /* Text Colors - Exact Specification */
+  --text-primary: #2C3E50;
+  --text-secondary: #7F8C8D;
+  --text-tertiary: #BDC3C7;
+  --text-on-primary: #FFFFFF;
+  --text-on-dark: #FFFFFF;
+  
+  /* Background Colors - Exact Specification */
+  --white: #FFFFFF;
+  --background-main: #F5F5F5;
+  --background-alt: #F9F9F9;
+  --gray-50: #F5F5F5;
+  --gray-100: #F9F9F9;
+  --gray-200: #ECF0F1;
+  --gray-300: #BDC3C7;
+  --gray-400: #95A5A6;
+  --gray-500: #7F8C8D;
+  --gray-600: #6C757D;
+  --gray-700: #495057;
+  --gray-800: #34495E;
+  --gray-900: #2C3E50;
+  --black: #000000;
+
+  /* Legacy variable mapping for compatibility */
+  --primary-dark: var(--primary-green-darker);
+  --primary-main: var(--primary-green);
+  --primary-light: var(--primary-green-light);
+  --accent-color: var(--primary-green-light);
+  --forest-green: var(--primary-green-dark);
+  --emerald: var(--primary-green-darker);
+  --mint: var(--primary-green);
+  --sage: var(--primary-green-light);
+  --seafoam: var(--primary-green-lighter);
+  --jade: var(--primary-green-dark);
+  --pine: var(--primary-green-darker);
+  --snow: var(--gray-50);
+  --mist: var(--gray-100);
+  --slate: var(--gray-800);
+  --silver: var(--gray-500);
+
+  /* Backgrounds - Clean & Minimal */
+  --background-main: var(--gray-50);
+  --background-card: var(--white);
+  --background-gradient: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  --hero-gradient: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  
+  /* Card Styling - Flat Design */
+  --surface-bg: var(--white);
+  --surface-border: var(--gray-200);
+  --card-border: 1px solid var(--gray-200);
+
+  /* Text Colors */
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-600);
+  --text-tertiary: var(--gray-500);
+  --text-on-primary: var(--white);
+  --text-on-dark: var(--white);
+
+  /* Shadows - Subtle & Clean */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-elevated: 0 12px 24px rgba(0, 0, 0, 0.12);
+  --glow-green: 0 0 20px rgba(46, 204, 113, 0.4);
+  --glow-neon: 0 0 15px var(--neon-green-glow);
+
+  /* Border Radius - Clean & Minimal */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* Spacing System (8px base) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Navbar & Sidebar - Exact Specification */
+  --navbar-bg: var(--white);
+  --navbar-height: 60px;
+  --navbar-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --sidebar-bg: var(--white);
+  --sidebar-width: 240px;
+  --sidebar-text: var(--text-primary);
+  --sidebar-active: var(--primary-green);
+  --sidebar-hover: var(--primary-green-hover);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  background-color: var(--background-main);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary-main);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* Utility Classes - Minimalist Card Design */
+.glass-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: var(--card-border);
+  padding: var(--space-xl);
+  transition: all var(--transition-base);
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-green-light);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar - Clean Design */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: 4px;
+  transition: background var(--transition-base);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green);
+}

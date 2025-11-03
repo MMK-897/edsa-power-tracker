@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align title to the left */
+    background: #ffffff;
+    height: 70px;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 240px; /* Assuming sidebar width is 240px */
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e9ecef;
+    width: calc(100% - 240px); /* Adjust based on sidebar width */
+    font-family: 'Poppins', sans-serif;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+}
+
+.pageTitle {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #343a40;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        left: 72px; /* Match collapsed sidebar width */
+        width: 100%;
+        width: calc(100% - 72px);
+    }
+}

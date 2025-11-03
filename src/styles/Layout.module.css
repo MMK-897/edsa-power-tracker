@@ -1,0 +1,19 @@
+.content {
+  margin-left: 240px;
+  padding-top: 80px;
+  padding-bottom: var(--space-2xl);
+  padding-left: var(--space-2xl);
+  padding-right: var(--space-2xl);
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: var(--background-main);
+  transition: all var(--transition-base);
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding-top: 80px;
+  }
+}

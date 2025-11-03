@@ -1,0 +1,166 @@
+.container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+.mainContent {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tableContainer {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  padding: 2rem;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 1.5rem;
+}
+
+.tableHeader h3 {
+  font-size: 1.8rem;
+  color: #343a40;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.searchInput,
+.statusFilter {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.searchInput {
+  min-width: 250px;
+}
+
+.searchInput:focus,
+.statusFilter:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  background-color: #fff;
+}
+
+.paymentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.paymentsTable th,
+.paymentsTable td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.paymentsTable th {
+  color: #495057;
+  font-weight: 700;
+  background-color: #f8f9fa;
+}
+
+.paymentsTable tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: center;
+  min-width: 70px;
+}
+
+.status.paid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.overdue {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.actionButton {
+  padding: 0.4rem 0.8rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.actionButton:hover {
+  background: #0056b3;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .tableHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .controls {
+    width: 100%;
+    flex-direction: column;
+  }
+}

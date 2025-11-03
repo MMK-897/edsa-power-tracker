@@ -1,0 +1,118 @@
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #064e3b; /* Dark Green background */
+  color: #d1d5db; /* Light gray text */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  border-right: 1px solid #056047;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #056047;
+  height: 70px; /* Match NavBar height */
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f9fafb; /* Off-white */
+  white-space: nowrap;
+}
+
+.nav {
+  flex-grow: 1;
+  padding: 1rem 0;
+}
+
+.navList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #d1d5db;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navLink:hover {
+  background-color: #056047; /* Slightly lighter green on hover */
+  color: #f9fafb;
+}
+
+.navLink.active {
+  background-color: #10b981; /* Emerald green for active link */
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.navLabel {
+  white-space: nowrap;
+}
+
+.footer {
+  padding: 1.5rem 0.75rem;
+  border-top: 1px solid #056047;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  color: #d1d5db;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.logoutButton:hover {
+  background-color: #056047;
+  color: #f9fafb;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 72px; /* Collapse sidebar on smaller screens */
+  }
+  .logoText, .navLabel {
+    display: none; /* Hide text labels */
+  }
+  .logoContainer {
+    justify-content: center;
+  }
+  .navLink, .logoutButton {
+    justify-content: center;
+    padding: 0.75rem;
+  }
+}

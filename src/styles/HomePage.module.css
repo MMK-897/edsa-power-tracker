@@ -1,0 +1,201 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--hero-gradient);
+    color: var(--forest-green);
+    font-family: var(--font-main);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 121, 107, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.header {
+    padding: var(--space-xl) var(--space-3xl);
+    background: var(--surface-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom: 2px solid var(--mint);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo span {
+    font-size: 2.8rem;
+    filter: drop-shadow(0 2px 8px rgba(76, 175, 80, 0.3));
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--forest-green);
+    letter-spacing: -0.02em;
+}
+
+.mainContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3xl) var(--space-xl);
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+    color: var(--forest-green);
+    letter-spacing: -0.03em;
+    text-shadow: 0 2px 4px rgba(27, 94, 32, 0.1);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    max-width: 650px;
+    margin: 0 auto var(--space-3xl);
+    color: var(--emerald);
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+.ctaButtons {
+    display: flex;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .ctaButtons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.button {
+    padding: 18px 40px;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 640px) {
+    .button {
+        width: 100%;
+    }
+}
+
+.primaryButton {
+    background: linear-gradient(90deg, var(--mint) 0%, var(--emerald) 100%);
+    color: white;
+}
+
+.primaryButton:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-elevated), var(--glow-green);
+}
+
+.primaryButton:active {
+    transform: translateY(-1px);
+}
+
+.secondaryButton {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--emerald);
+    border-color: var(--emerald);
+    backdrop-filter: blur(10px);
+}
+
+.secondaryButton:hover {
+    background: white;
+    border-color: var(--mint);
+    color: var(--mint);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-elevated);
+}
+
+.secondaryButton:active {
+    transform: translateY(-1px);
+}
+
+.footer {
+    padding: var(--space-xl);
+    font-size: 0.95rem;
+    color: var(--emerald);
+    background: var(--surface-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-top: 2px solid var(--mint);
+    font-weight: 500;
+    position: relative;
+    z-index: 10;
+}

@@ -1,0 +1,284 @@
+.container {
+  padding: 2rem;
+  background-color: #f8f9fa; /* A light, neutral background */
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  font-size: 2.5rem; /* Slightly smaller for a cleaner look */
+  font-weight: 700;
+  color: #212529; /* Darker text for better contrast */
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #6c757d; /* Softer color for the subtitle */
+  margin-top: 0.5rem;
+}
+
+.mainContent {
+  /* No longer a grid, just a block for the table container */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.formContainer, .tableContainer {
+  background: #ffffff; /* Solid white background for cards */
+  border-radius: 12px; /* Slightly smaller radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer, more modern shadow */
+  border: 1px solid #e9ecef;
+  padding: 2rem;
+}
+
+.formContainer h2, .tableContainer h3 {
+  font-size: 1.8rem;
+  color: #343a40;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formContainer p {
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.selectInput, .textInput, .textareaInput {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  font-size: 1rem;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.selectInput:focus, .textInput:focus, .textareaInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  background-color: #fff;
+}
+
+.timeSelector {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.timeSelector > div {
+  flex: 1;
+  min-width: 150px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.submitButton, .cancelButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.createButton {
+  background: #007bff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.createButton:hover {
+  background: #0056b3;
+}
+
+.submitButton {
+  background: #007bff;
+  color: white;
+}
+
+.submitButton:hover {
+  background: #0056b3;
+}
+
+.submitButton:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.cancelButton:hover {
+  background: #ced4da;
+}
+
+.outagesTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.outagesTable th, .outagesTable td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.outagesTable th {
+  color: #495057;
+  font-weight: 700;
+  background-color: #f8f9fa;
+}
+
+.outagesTable tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.outagesTable tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.resolveButton {
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.8rem;
+}
+
+.resolveButton:hover {
+  background: #218838;
+}
+
+.resolvedText {
+  color: #28a745;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.formError {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Status Badge Styles (already suggested, but good to have here) */
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.status.resolved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.active {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modalContent {
+  background: #f8f9fa;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 992px) {
+  /* No changes needed as it's already single column */
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+  .formContainer, .tableContainer {
+    padding: 1.5rem;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+  .modalContent {
+    padding: 0;
+  }
+}
