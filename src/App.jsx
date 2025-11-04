@@ -16,7 +16,7 @@ import Payments from "./Pages/Payments";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/edsa-power-tracker">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignUp />} />
