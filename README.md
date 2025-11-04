@@ -1,4 +1,4 @@
-# Community Power Tracker
+# Edsa Power Tracker
 
 Community Power Tracker is a digital solution designed to crowdsource real-time electricity reliability data from communities in Sierra Leone and beyond.  
 It connects **residents** and **electricity distributors** through a simple, transparent system that helps improve power delivery and decision-making.
