@@ -20,11 +20,12 @@ This project empowers communities and supports digital transformation by turning
 - User registration and login  
 - Report power status (ON/OFF) in real time  
 - View recent outage trends in their community  
-- Access transparent power availability data  
+- Access transparent power availability data
+- Do payments for edsa units
 
 ###  Admin / Distributor (Web Dashboard)
-- Login and manage admin accounts  
-- View and filter reports by location or time  
+- Login and manage outages
+- View and filter reports by location or time
 - Analyze reliability data for planning and maintenance  
 
 ---
@@ -69,7 +70,6 @@ To build a transparent, data-driven energy ecosystem in Sierra Leone — where c
 - Integrate SMS reporting for offline users  
 - Build analytics for long-term power reliability trends  
 - Connect with government digital platforms  
-
 
 
 ---
