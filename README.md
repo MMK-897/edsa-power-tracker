@@ -25,7 +25,6 @@ This project empowers communities and supports digital transformation by turning
 ###  Admin / Distributor (Web Dashboard)
 - Login and manage admin accounts  
 - View and filter reports by location or time  
-- Visualize outage patterns using maps and charts  
 - Analyze reliability data for planning and maintenance  
 
 ---
@@ -62,11 +61,6 @@ Community Power Tracker provides **real-time, community-driven data** that helps
 
 To build a transparent, data-driven energy ecosystem in Sierra Leone — where citizens and energy providers collaborate through technology to make power more reliable and equitable.
 
----
-
-## Screenshots (Coming Soon)
-
-_Add screenshots or demo images once available._
 
 ---
 
@@ -76,28 +70,12 @@ _Add screenshots or demo images once available._
 - Build analytics for long-term power reliability trends  
 - Connect with government digital platforms  
 
----
 
-##  Contributing
-
-Contributions are welcome!  
-If you'd like to help improve the app:
-1. Fork the repository  
-2. Create a new branch (`git checkout -b feature-name`)  
-3. Commit your changes (`git commit -m 'Add feature'`)  
-4. Push to your branch (`git push origin feature-name`)  
-5. Open a Pull Request  
-
----
-
-##  License
-
-This project is licensed under the **MIT License** — feel free to use, modify, and build upon it.
 
 ---
 
 ##  Contact
 
 **Developers:** Mohamed Kolleh Mansaray, Gabriel Samura
- Project: *Community Power Tracker*  
+ Project: *Edsa Power Tracker*  
  "Turning community data into power for change.” 
